@@ -1,41 +1,44 @@
-<!-- Please do not change this logo with link -->
-[![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# Update the title for avr128db48-constant-current-driver-using-opamp-mplab-mcc here
+<a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
-<!-- This is where the introduction to the example goes, including mentioning the peripherals used -->
+# Constant-Current Driver Using the Analog Signal Conditioning (OPAMP) Peripheral
+<p align="left">
+  <img width=800px height=auto src="images/setup.png">
+</p>
+
+A new feature introduced in the AVR® DB MCU is the Analog Signal Conditioning (OPAMP) peripheral. In this example, the OPAMP is used as a constant-current driver using a single external resistor. It can be used to drive a load such as LEDs, with constant current and not constant voltage. The OPAMP peripheral also provides the ability to adjust the current setting under firmware control. The configuration for this example can be seen in the figure above. For more information about setup and code, see the [application note](https://microchip.com/DS00003632).
 
 ## Related Documentation
 
-<!-- Any information about an application note or tech brief can be linked here. Use unbreakable links!
-     In addition a link to the device family landing page and relevant peripheral pages as well:
-     - [AN3381 - Brushless DC Fan Speed Control Using Temperature Input and Tachometer Feedback](https://microchip.com/00003381/)
-     - [PIC18F-Q10 Family Product Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family) -->
+* [AN3632 - Constant-Current Driver Using the Analog Signal Conditioning (OPAMP) Peripheral](https://microchip.com/DS00003632)
+* [AVR128DB48 Curiosity Nano User Guide](https://www.microchip.com/DS50003037)
+* [AVR128DB48 Device Page](https://www.microchip.com/wwwproducts/en/AVR128DB48)
 
 ## Software Used
 
-<!-- All software used in this example must be listed here. Use unbreakable links!
-     - MPLAB® X IDE 5.30 or newer [(microchip.com/mplab/mplab-x-ide)](http://www.microchip.com/mplab/mplab-x-ide)
-     - MPLAB® XC8 2.10 or a newer compiler [(microchip.com/mplab/compilers)](http://www.microchip.com/mplab/compilers)
-     - MPLAB® Code Configurator (MCC) 3.95.0 or newer [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - MPLAB® Code Configurator (MCC) Device Libraries PIC10 / PIC12 / PIC16 / PIC18 MCUs [(microchip.com/mplab/mplab-code-configurator)](https://www.microchip.com/mplab/mplab-code-configurator)
-     - Microchip PIC18F-Q Series Device Support (1.4.109) or newer [(packs.download.microchip.com/)](https://packs.download.microchip.com/) -->
-
+* [MPLAB® X](https://www.microchip.com/mplab/mplab-x-ide) v5.45 or later
+* [MPLAB® XC8 Compiler](https://www.microchip.com/mplab/compilers) v2.31 or later
+* MPLABX AVR-Dx_DFP version 1.6.88 or later
+* For the START based Microchip Studio version of this project, please go to [this repository](https://github.com/microchip-pic-avr-examples/avr128db48-constant-current-driver-using-opamp-studio-start)
+  
 ## Hardware Used
 
-<!-- All hardware used in this example must be listed here. Use unbreakable links!
-     - PIC18F47Q10 Curiosity Nano [(DM182029)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
-     - Curiosity Nano Base for Click boards™ [(AC164162)](https://www.microchip.com/Developmenttools/ProductDetails/AC164162)
-     - POT Click board™ [(MIKROE-3402)](https://www.mikroe.com/pot-click) -->
+* [AVR128DB48 Curiosity Nano](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV35L43A)
+* One resistor (value dependent on desired current)
+* Load (LED, etc)
 
-## Setup
+## Demo Configuration
+* Connect the load, such as an LED, between PD2 (OP0OUT) and PD3 (OP0INN) as shown in the schematic above
+* Connect a resistor, R3, from PD3 (OP0INN) to GND. The value of R3 determines the amperage of the constant current. For instance, using R3 = 205Ω will yield a current of 1mA with this example implementation. See the [application note](https://microchip.com/DS00003632) for more information on how to configure R3 to produce a constant current with a specific amperage.
+* To change the constant current level value in firmware with MCC, click on the *MCC* button in MPLAB X and click on the *OPAMP* peripheral under *Project Resources*. In the *OPAMP* tab, under *Easy Seup* find and click on the *OP0* tab. Use the drop down menu on the *MUXWIP: Multiplexer for Wiper Multiplexer* setting to change the amperage of the constant current according to the formula described in the [application note](https://microchip.com/DS00003632). 
 
-<!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
+## Running the Demo in MPLAB X
+* Connect the AVR128DB48 Curiosity Nano to a computer using a USB cable
+* Download the *.zip file or clone the example to get the source code
+* Open `avr128db48-constant-current-driver-using-opamp-mplab-mcc.X` in MPLAB X
+* Press the make and program button to program the device
+* If no tool has been chosen, a window will open, select the AVR128DB48 Curiosity Nano. The tool can also be choosen in the project settings. 
 
-## Operation
+## Conclusion
+After going through this example you should have a better understanding of how to set up the OPAMP peripheral as a constant current driver with a specific amperage for a load.
 
-<!-- Explain how to operate the example. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
-
-## Summary
-
-<!-- Summarize what the example has shown -->
