@@ -1,3 +1,12 @@
+/**
+  @Company
+    Microchip Technology Inc.
+
+  @Description
+    This Source file provides APIs.
+    Generation Information :
+    Driver Version    :   1.0.0
+*/
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -31,17 +40,27 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
 
-int main(void)
-{
-    SYSTEM_Initialize();
+#ifndef MCC_H
+#define	MCC_H
 
-    while(1)
-    {
-    }    
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "../system/utils/compiler.h"
+#include "../system/clock.h"
+#include "../system/pins.h"
+#include "../system/clock.h"
+#include "../opamp/opamp.h"
+#include "../system/interrupt.h"
+/**
+ * Initializes MCU, drivers and middleware in the project
+**/
+void SYSTEM_Initialize(void);
+
+#ifdef __cplusplus
 }
+#endif
+#endif	/* MCC_H */

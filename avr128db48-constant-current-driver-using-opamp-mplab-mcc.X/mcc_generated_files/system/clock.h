@@ -1,3 +1,12 @@
+/**
+  @Company
+    Microchip Technology Inc.
+
+  @Description
+    This Source file provides APIs.
+    Generation Information :
+    Driver Version    :   1.0.0
+*/
 /*
 Copyright (c) [2012-2020] Microchip Technology Inc.  
 
@@ -31,17 +40,19 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
     third party licenses prohibit any of the restrictions described here, 
     such restrictions will not apply to such third party software.
 */
-#include "mcc_generated_files/system/system.h"
 
-/*
-    Main application
-*/
 
-int main(void)
-{
-    SYSTEM_Initialize();
+#ifndef CLOCK_H
+#define CLOCK_H
 
-    while(1)
-    {
-    }    
-}
+#ifndef F_CPU
+#define F_CPU 4000000
+#endif
+
+#include "ccp.h"
+
+void CLOCK_Initialize(void);
+void CFD_Enable(CLKCTRL_CFDSRC_t cfd_source);
+void CFD_Disable();
+
+#endif // CLOCK_H

@@ -4,27 +4,27 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-constant-current-driver-using-opamp-mplab-mcc",
-        "version": "1.0.0",
+        "version": "2.0.0",
         "displayName": "Constant-Current Driver Using the Analog Signal Conditioning (OPAMP) Peripheral",
         "projectName": "avr128db48-constant-current-driver-using-opamp-mplab-mcc",
-        "shortDescription": "This MCC based MPLAB X IDE example shows how to use the Analog Signal Conditioning (OPAMP) peripheral to implement a constant-current driver using just one external resistor. The constant current amperage setting can be adjusted using firmware control.",
+        "shortDescription": "This MPLAB X Melody example shows how to use the Analog Signal Conditioning (OPAMP) peripheral to implement a constant-current driver using just one external resistor. The constant current amperage setting can be adjusted using firmware control.",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.45.0"
+            "semverRange": ">=5.50.0"
         },
         "compiler": [
-			{
-				"name": "XC8",
-				"semverRange": "^2.31.0"
-			}
-		],
+            {
+                "name": "XC8",
+                "semverRange": "^2.32.0"
+            }
+        ],
         "dfp": {
             "name": "AVR-Dx_DFP",
-            "semverRange": "^1.6.88"
+            "semverRange": "^1.7.98"
         },
         "configurator": {
             "name": "MCC",
-            "semverRange": ">=4.0.2"
+            "semverRange": ">=4.1.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -36,44 +36,46 @@
                 "versionRange": "*"
             }
         },
-        "author": "Henrik Nyholm",
-        "subcategories": ["MCC",
-			[
-               "Peripherals", "OPAMP"
+        "author": "Martin Thomaz",
+        "subcategories": [
+            [
+               "Peripherals", 
+               "OPAMP"
             ],
             [
-               "Peripherals", "DAC"
-            ],            			
-            [
-               "Development Kit", "AVR128DB48 Curiosity Nano"
-            ]       
+               "Peripherals",
+               "DAC"
+            ]
         ],
         "peripherals": [
-            "OPAMP", "DAC"
+            "OPAMP",
+            "DAC"
         ],
         "keywords": [
-			"Analog Signal Conditioning",
-			"Operational Amplifier",
+            "Analog Signal Conditioning",
+            "Operational Amplifier",
             "Op Amp",
-			"Resistor Ladder",
-			"Constant Current",
-			"Current Driver",
-			"D/A Converters",
-			"Low BOM",
-			"CIP",
+            "Resistor Ladder",
+            "Constant Current",
+            "Current Driver",
+            "D/A Converter",
+            "Low BOM",
+            "CIP",
             "constant-current-driver-using-opamp",
-            "Current Source"
+            "Current Source",
+            "Melody",
+            "Curiosity Nano"
         ],
-		"additionalData": {
-			"longDescription": {
-				"metaDataVersion": "1.0.0",
-				"category": "com.microchip.portal.fileRef",
-				"content": {
-					"metaDataVersion": "1.0.0",
-					"fileName": "./README.md",
-					"mimeType": "text/markdown"
-				}
-			}
-		}
-	}
+        "additionalData": {
+            "longDescription": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.portal.fileRef",
+                "content": {
+                    "metaDataVersion": "1.0.0",
+                    "fileName": "./README.md",
+                    "mimeType": "text/markdown"
+                }
+            }
+        }
+    }
 }
