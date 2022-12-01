@@ -1,10 +1,10 @@
 {
-    "metaDataVersion": "1.0.0",
+    "metaDataVersion": "1.3.0",
     "category": "com.microchip.ide.project",
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-constant-current-driver-using-opamp-mplab-mcc",
-        "version": "2.0.0",
+        "version": "2.1.0",
         "displayName": "Constant-Current Driver Using the Analog Signal Conditioning (OPAMP) Peripheral",
         "projectName": "avr128db48-constant-current-driver-using-opamp-mplab-mcc",
         "shortDescription": "This MPLAB X Melody example shows how to use the Analog Signal Conditioning (OPAMP) peripheral to implement a constant-current driver using just one external resistor. The constant current amperage setting can be adjusted using firmware control.",
@@ -37,16 +37,6 @@
             }
         },
         "author": "Martin Thomaz",
-        "subcategories": [
-            [
-               "Peripherals", 
-               "OPAMP"
-            ],
-            [
-               "Peripherals",
-               "DAC"
-            ]
-        ],
         "peripherals": [
             "OPAMP",
             "DAC"
