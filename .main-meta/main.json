@@ -2,7 +2,7 @@
     "metaDataVersion": "1.3.0",
     "category": "com.microchip.ide.project",
     "content": {
-        "metaDataVersion": "1.1.0",
+        "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-constant-current-driver-using-opamp-mplab-mcc",
         "version": "2.1.0",
         "displayName": "Constant-Current Driver Using the Analog Signal Conditioning (OPAMP) Peripheral",
@@ -42,17 +42,14 @@
             "DAC"
         ],
         "keywords": [
-            "Analog Signal Conditioning",
+            "Signal Conditioning",
             "Operational Amplifier",
             "Op Amp",
             "Resistor Ladder",
-            "Constant Current",
-            "Current Driver",
+            "Direct Current",
             "D/A Converter",
             "Low BOM",
             "CIP",
-            "constant-current-driver-using-opamp",
-            "Current Source",
             "Melody",
             "Curiosity Nano"
         ],
